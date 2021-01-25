@@ -47,7 +47,7 @@
   font-weight: 600;
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   border: 2px solid #c2b04d;
   border-radius: 4px;
 }

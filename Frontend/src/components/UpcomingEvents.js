@@ -83,7 +83,7 @@ b.reverse();
 
                         <div className="time col-l-2">
 
-                          <h5> {event.date}/{event.month}/{event.year}</h5>
+                          <h5> {event.date}/{event.month}</h5>
                         </div>
                         <div className="details">
                           <div className="name col-l-7">
@@ -115,7 +115,7 @@ b.reverse();
 
                         <div className="time col-l-2">
 
-                          <h5>{event.date}/{event.month}/{event.year}</h5>
+                          <h5>{event.date}/{event.month}</h5>
                         </div>
                         <div className="details past">
                           <div className="name col-l-7">

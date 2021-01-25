@@ -97,7 +97,7 @@ body {
   margin-bottom: 1.25rem;
   color: var(--clr-grey-5);
 }
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 760px) {
   .container h1 {
     font-size: 4rem;
   }
@@ -158,8 +158,9 @@ Menu
 }
 .btn-container {
   margin-bottom: 4rem;
-  display: flex;
-  justify-content: center;
+  /* display: flex; */
+  /* justify-content: center; */
+  text-align: center;
 }
 
 .filter-btn {
@@ -245,7 +246,7 @@ Menu
   margin-top: auto;
   margin-bottom: 1rem;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 640px) {
   .menu-project {
     grid-template-columns: 225px 1fr;
     gap: 0 1.25rem;
@@ -253,6 +254,12 @@ Menu
   }
   .photo {
     height: 175px;
+  }
+  .btn-container {
+    margin-bottom: 4rem;
+    /* display: flex; */
+    /* justify-content: center; */
+    text-align: center;
   }
 }
 @media screen and (min-width: 1200px) {
