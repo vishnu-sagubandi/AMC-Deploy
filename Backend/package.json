@@ -1,0 +1,44 @@
+{
+  "name": "project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon ./bin/www",
+    "start-server": "node app.js"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  },
+  "author": "Rohan Kumar Jha& Aditya Prakash Gupta",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.3",
+    "connect-flash": "^0.1.1",
+    "connect-mongodb-session": "^2.0.3",
+    "cookie-parser": "~1.4.4",
+    "cors": "^2.8.5",
+    "csurf": "^1.11.0",
+    "debug": "~2.6.9",
+    "dompurify": "^2.2.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "express-handlebars": "^3.0.0",
+    "express-session": "^1.15.6",
+    "http-errors": "~1.6.3",
+    "jade": "~1.11.0",
+    "jsdom": "^16.4.0",
+    "marked": "^1.2.6",
+    "method-override": "^3.0.0",
+    "moment": "^2.29.1",
+    "mongodb": "^3.1.6",
+    "mongoose": "^5.2.17",
+    "morgan": "~1.9.1",
+    "mysql2": "^1.6.1",
+    "pug": "^2.0.3",
+    "sequelize": "^5.0.0-beta.11",
+    "slugify": "^1.4.6"
+  }
+}

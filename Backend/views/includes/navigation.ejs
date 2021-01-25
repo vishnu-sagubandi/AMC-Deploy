@@ -1,0 +1,127 @@
+<div class="backdrop"></div>
+<header class="main-header">
+    <button id="side-menu-toggle">Menu</button>
+    <nav class="main-header__nav">
+        <ul class="main-header__item-list">
+           
+           
+            <li class="main-header__item">
+                <a class="<%= path === '/db' ? 'active' : '' %>" href="/db">Home</a>
+            </li>
+            
+            <% if (isAuthenticated) { %>
+
+
+                <li class="main-header__item">
+                    <a class="<%= path === '/db/projects' ? 'active' : '' %>" href="/db/projects">Projects</a>
+                </li>
+               
+                <li class="main-header__item">
+                    <a class="<%= path === '/db/admin/add-project' ? 'active' : '' %>" href="/db/admin/add-project">Add Project
+                    </a>
+                </li>
+                <li class="main-header__item">
+                    <a class="<%= path === '/db/admin/projects' ? 'active' : '' %>" href="/db/admin/projects">Admin Projects
+                    </a>
+                </li>
+                <li class="main-header__item">
+                    <a class="<%= path === '/db/team' ? 'active' : '' %>" href="/db/team">Team
+                    </a>
+                </li>
+                <li class="main-header__item">
+                    <a class="<%= path === '/db/alum' ? 'active' : '' %>" href="/db/alum">Alumni
+                    </a>
+                </li>
+                <li class="main-header__item">
+                    <a class="<%= path === '/db/resources' ? 'active' : '' %>" href="/db/resources">Resources
+                    </a>
+                </li>
+                <li class="main-header__item">
+                    <a class="<%= path === '/db/achievements' ? 'active' : '' %>" href="/db/achievements">Achievements
+                    </a>
+                </li>
+                <li class="main-header__item">
+                    <a class="<%= path === '/db/events' ? 'active' : '' %>" href="/db/events">Events
+                    </a>
+                </li>
+            <% } %>
+        </ul>
+        <ul class="main-header__item-list">
+            <% if (!isAuthenticated) { %>
+                <li class="main-header__item">
+                    <a class="<%= path === '/db/login' ? 'active' : '' %>" href="/db/login">Login</a>
+                </li>
+                <!-- <input type="hidden" name="_csrf" value="<%= csrfToken %>"> -->
+                <!-- <li class="main-header__item">
+                    <a class="<%= path === '/signup' ? 'active' : '' %>" href="/signup">Signup</a>
+                </li> -->
+            <% } else { %>
+                <li class="main-header__item">
+                    <form action="/db/logout" method="post">
+                        <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                        <button type="submit">Logout</button>
+                    </form>
+                </li>
+            <% } %>
+        </ul>
+    </nav>
+</header>
+
+<nav class="mobile-nav">
+    <ul class="mobile-nav__item-list">
+       
+        <li class="main-header__item">
+            <a class="<%= path === '/db' ? 'active' : '' %>" href="/db">Home</a>
+        </li>
+        
+        <% if (isAuthenticated) { %>
+            <li class="mobile-nav__item">
+                <a class="<%= path === '/db/projects' ? 'active' : '' %>" href="/db/projects">Projects</a>
+            </li>
+            <li class="mobile-nav__item">
+                <a class="<%= path === '/db/admin/add-project' ? 'active' : '' %>" href="/db/admin/add-project">Add Project
+                </a>
+            </li>
+            <li class="mobile-nav__item">
+                <a class="<%= path === '/db/admin/projects' ? 'active' : '' %>" href="/db/admin/projects">Admin Projects
+                </a>
+            </li>
+            <li class="mobile-nav__item">
+                <a class="<%= path === '/db/team' ? 'active' : '' %>" href="/db/team">Team
+                </a>
+            </li>
+            <li class="mobile-nav__item">
+                <a class="<%= path === '/db/alum' ? 'active' : '' %>" href="/db/alum">Alumni
+                </a>
+            </li>
+            <li class="mobile-nav__item">
+                <a class="<%= path === '/db/resources' ? 'active' : '' %>" href="/db/resources">Resources
+                </a>
+            </li>
+            <li class="mobile-nav__item">
+                <a class="<%= path === '/db/achievements' ? 'active' : '' %>" href="/db/achievements">Achievements
+                </a>
+            </li>
+            <li class="mobile-nav__item">
+                <a class="<%= path === '/db/events' ? 'active' : '' %>" href="/db/events">Events
+                </a>
+            </li>
+        <% } %>
+        <% if (!isAuthenticated) { %>
+            <li class="mobile-nav__item">
+                <a class="<%= path === '/db/login' ? 'active' : '' %>" href="/db/login">Login</a>
+            </li>
+            <!-- <li class="mobile-nav__item">
+                <a class="<%= path === '/signup' ? 'active' : '' %>" href="/signup">Signup</a>
+            </li> -->
+        <% } else { %>
+           
+            <li class="mobile-nav__item">
+                <form action="/db/logout" method="post">
+                    <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                    <button type="submit">Logout</button>
+                </form>
+            </li>
+        <% } %>
+    </ul>
+</nav>

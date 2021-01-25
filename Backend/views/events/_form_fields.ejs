@@ -1,0 +1,20 @@
+<div class="form-group">
+    <label for="name">Name *</label>
+    <input required type="text" value="<%= team.name %>" name="name" id="name" class="form-control mb-4">
+    <label for="date">Date(Enter between 1 and 31) *</label>
+    <input required type="number" value="<%= team.date %>" name="date" id="date" class="form-control mb-4" min="1" max="31">
+    <label for="month">Month(Enter between 1 and 12) *</label>
+    <input required type="number" value="<%= team.month %>" name="month" id="month" class="form-control mb-4" min="1" max="12">
+    <label for="year">Year(Enter in complete 4 digit format) *</label>
+    <input required type="number" value="<%= team.year %>" name="year" id="year" class="form-control mb-4">
+    <label for="day">Day of the event(7 days of the week) *</label>
+    <input required type="text" value="<%= team.day %>" name="day" id="day" class="form-control mb-4">
+    <label for="time">Time of the event(Enter in 24 hour format, such as 11.59 pm as 23.59. Avoid 0s in the end. If time is 15.00 write 15.05)</label>
+    <input type="number" value="<%= team.time %>" name="time" id="time" class="form-control mb-4" step="0.01" min="0" max="24">
+    <label for="venue">Venue(such as MS Teams code in case of Online Event or LT-3 in case of Offline event)</label>
+    <input type="text" value="<%= team.venue %>" name="venue" id="venue" class="form-control mb-4">
+</div>
+<!-- <input type="hidden" name="_csrf" value="<%= csrfToken %>"> -->
+<a href='/db/events' class="mb-4 btn btn-secondary">Cancel</a>
+<input type="hidden" name="_csrf" value="<%= csrfToken %>">
+<button type="submit" class="mb-4 btn btn-primary">SAVE</button>

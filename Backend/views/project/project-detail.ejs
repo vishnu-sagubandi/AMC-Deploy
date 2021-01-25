@@ -1,0 +1,22 @@
+<%- include('../includes/head.ejs') %>
+    </head>
+
+    <body>
+        <%- include('../includes/navigation.ejs') %>
+        <main class="centered">
+            <h1><%= project.title %></h1>
+            <h1 >
+                ( <%= project.type %> )
+            </h1>
+            <hr>
+            <div>
+                <img src="<%= project.imageUrl %>" alt="<%= project.title %>">
+            </div>
+            
+            <div>
+                <%- project.sanitizedHtml %>
+            </div>
+           
+           
+        </main>
+        <%- include('../includes/end.ejs') %>

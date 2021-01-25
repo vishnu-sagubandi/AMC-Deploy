@@ -1,0 +1,26 @@
+<div class="form-group">
+    <label for="name">Name *</label>
+    <input required type="text" value="<%= team.name %>" name="name" id="name" class="form-control mb-4">
+    <label for="department">Department *</label>
+    <input required type="text" value="<%= team.department %>" name="department" id="department" class="form-control mb-4">
+    <label for="degree">Degree *</label>
+    <input required type="text" value="<%= team.degree %>" name="degree" id="degree" class="form-control mb-4">
+    <label for="year">Passout Year(Enter last two digits only) *</label>
+    <input required type="text" value="<%= team.year %>" name="year" id="year" class="form-control mb-4">
+    <label for="photo">Profile Picture(Google Drive link) *</label>
+    <input required type="text" value="<%= team.photo %>" name="photo" id="photo" class="form-control mb-4">
+    <label for="por">Position of Responsibility in the Club *</label>
+    <input required type="text" value="<%= team.por %>" name="por" id="por" class="form-control mb-4">
+    <label for="profession">Profession *</label>
+    <input required type="text" value="<%= team.profession %>" name="profession" id="profession" class="form-control mb-4">
+    <label for="facebook">Facebook</label>
+    <input type="text" value="<%= team.facebook %>" name="facebook" id="facebook" class="form-control mb-4">
+    <label for="instagram">Instagram</label>
+    <input type="text" value="<%= team.instagram %>" name="instagram" id="instagram" class="form-control mb-4">
+    <label for="linkedin">LinkedIn</label>
+    <input type="text" value="<%= team.linkedin %>" name="linkedin" id="linkedin" class="form-control mb-4">
+    <label for="portfolio">Portfolio</label>
+    <input type="text" value="<%= team.portfolio %>" name="portfolio" id="portfolio" class="form-control mb-4">
+</div>
+<a href='/db/alum' class="mb-4 btn btn-secondary">Cancel</a>
+<button type="submit" class="mb-4 btn btn-primary">SAVE</button>

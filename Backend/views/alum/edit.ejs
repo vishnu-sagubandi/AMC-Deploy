@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <title>Edit Alumni</title>
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+    
+   
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link active" href="/db">Home</a>
+            <a class="nav-item nav-link active" href="/db/admin/projects">Projects</a>
+            <a class="nav-item nav-link active" href="/db/team">Team </a>
+            <a class="nav-item nav-link active" href="/db/alum">Alumni</a>
+            <a class="nav-item nav-link active" href="/db/resources">Resources</a>
+            <a class="nav-item nav-link active" href="/db/events">Events</a>
+            <a class="nav-item nav-link active" href="/db/achievements">Achievements</a>
+          </div>
+        </div>
+      </nav>
+        <main>
+        <h1 class="mb-4">Edit Alumni</h1>
+        <form action="/db/alum/<%= team.id %>?_method=PUT" method="POST">
+            <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+            <%- include('_form_fields') %> 
+        </form>
+    </main>
+</body>
+</html>

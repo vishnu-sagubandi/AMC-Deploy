@@ -1,0 +1,14 @@
+<div class="form-group"> 
+    <label for="name">Name of Achievement *</label>
+    <input required type="text" value="<%= team.name %>" name="name" id="name" class="form-control mb-4">
+    <label for="month">Month of Achievement (Enter between 1 and 12) *</label>
+    <input required type="number" value="<%= team.month %>" name="month" id="month" class="form-control mb-4" min="1" max="12">
+    <label for="year">Year of Achievement(Enter in 4 digit format only) *</label>
+    <input required type="number" value="<%= team.year %>" name="year" id="year" class="form-control mb-4">
+    <label for="description">Description (Enter a 1 line short description)</label>
+    <input type="text" value="<%= team.description %>" name="description" id="description" class="form-control mb-4">
+</div>
+<!-- <input type="hidden" name="_csrf" value="<%= csrfToken %>"> -->
+<a href='/db/achievements' class="mb-4 btn btn-secondary">Cancel</a>
+<input type="hidden" name="_csrf" value="<%= csrfToken %>">
+<button type="submit" class="mb-4 btn btn-primary">SAVE</button>

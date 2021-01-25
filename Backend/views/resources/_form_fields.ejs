@@ -1,0 +1,25 @@
+<div class="form-group">
+    <label for="name">Name *</label>
+    <input required type="text" value="<%= resource.name %>" name="name" id="name" class="form-control mb-4">
+     <label for="type">Type</label>
+                <select>
+                    <option >aerial</option>
+                    <option >swarm</option>
+                    <option >aerobatics</option>
+                    <option >sae</option>
+                    <option >general</option>
+                    <option >blog</option>
+                  </select>
+                  <br>
+                  <br>
+                  <p class="warning" style="color:rgb(253, 38, 0);" >* Write exactly same as in dropdown menu</p>
+                  
+                <input  required type="text" value="<%= resource.type %>" name="type" id="type" class="form-control mb-4">
+    <label for="drive_link">Link *</label>
+    <input type="text" value="<%= resource.drive_link %>" name="drive_link" id="drive_link" class="form-control mb-4">
+    <label for="youtube_link">Youtube Link *</label>
+    <input type="text" value="<%= resource.youtube_link %>" name="youtube_link" id="youtube_link" class="form-control mb-4">
+</div>
+<a href='/db/resources' class="mb-4 btn btn-secondary">Cancel</a>
+<input type="hidden" name="_csrf" value="<%= csrfToken %>">
+<button type="submit" class="mb-4 btn btn-primary">SAVE</button>
