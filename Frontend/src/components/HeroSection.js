@@ -9,7 +9,7 @@ import './HeroSection.css';
 function HeroSection() {
   return (
     <div className='hero-container' id='hero'>
-      <video src='/videos/video-4.mp4' autoPlay loop muted />
+      <video src='/videos/video-4.mp4' autoPlay loop muted playsinline />
       <h1  class="animate__animated animate__bounce">Welcome to </h1>
       <h2 className="maintitle">Aero-Modelling Club,</h2>
       <h2> IIT-(BHU)</h2>
