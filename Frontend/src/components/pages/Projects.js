@@ -83,7 +83,7 @@ const Menu = ({ projects }) => {
                 <h4>{title}</h4>
               </header>
               <p className="project-text">{description}</p>
-              <Link to={'/'+_id} id='ExtraBtn'><a href="#" className='Extra-btn' >Read more</a></Link>
+              <Link to={'/'+_id} id='ExtraBtn'><a className='Extra-btn' >Read more</a></Link>
             </div>
           </article>
         );
