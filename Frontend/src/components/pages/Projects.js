@@ -35,42 +35,29 @@ export default function Projects() {
   },[]);
 
 
-const alltypes = ['all', ...new Set(projects.map((item) => item.type))];
- console.log(alltypes);
+const alltypes = [ ...new Set(projects.map((item) => item.type))];
+const [projecttype,setProjecttype]=useState("swarm");
+const [types, settypes] = useState(alltypes);
   
-  const [menuprojects, setMenuprojects] = useState(projects);
-  const [types, settypes] = useState(alltypes);
   
 
   const filterprojects = (type) => {
-    if (type === 'all') {
-      setMenuprojects(projects);
-      return;
-    }
-   
-    const newprojects = projects.filter((project) => project.type === type);
-    setMenuprojects(newprojects);
+    setProjecttype(type);
+    console.log(alltypes);
   };
+   
 
-   console.log(types);
     const Types = ({ types, filterprojects }) => {
       // console.log(types);
     return (
-
-
-
-      <div className="btn-container" onLoad={() => filterprojects('all')}>
-
-
-        {alltypes.map((type) => {
-          
+      <div className="btn-container">
+        {alltypes.map((type,index) => {
           return (
-            
             <button
+              key={index}
               type="button"
-              className="filter-btn btn-default"
               onClick={() => filterprojects(type)}
-              
+              className={projecttype === type ? "filter-btn active" : "filter-btn inactive"}
             >
               {type}
             </button>
@@ -82,14 +69,11 @@ const alltypes = ['all', ...new Set(projects.map((item) => item.type))];
 
   
 
-  const Menu = ({ projects }) => {
+const Menu = ({ projects }) => {
   return (
     <div className="project-section-center">
-
-    
-    
-      {projects.map(menuproject => {
-        const {_id,title, imageUrl, description } = menuproject;
+      {projects.filter(project => project.type === projecttype).map((project) => {
+        const {_id,title, imageUrl, description } = project;
         
         return (
           <article className="menu-project">
@@ -99,7 +83,7 @@ const alltypes = ['all', ...new Set(projects.map((item) => item.type))];
                 <h4>{title}</h4>
               </header>
               <p className="project-text">{description}</p>
-              <Link to={'/'+_id} id='ExtraBtn'><a  className='Extra-btn' >Read more</a></Link>
+              <Link to={'/'+_id} id='ExtraBtn'><a href="#" className='Extra-btn' >Read more</a></Link>
             </div>
           </article>
         );
@@ -111,11 +95,11 @@ const alltypes = ['all', ...new Set(projects.map((item) => item.type))];
   return (
     <div className="container">
       <div className="projects-title">
-          <h2>our projects</h2>
+          <h2>Our Projects</h2>
           <div className="project-underline"></div>
         </div>
       <Types types={types} filterprojects={filterprojects} />
-      <Menu projects={menuprojects} />
+      <Menu projects={projects} />
     </div>
   )
 }
